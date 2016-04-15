@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="d3Q-Ib-Rk0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Photo Collection-->
@@ -16,22 +18,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="b64-Q1-Mvh">
-                                <rect key="frame" x="180" y="108" width="240" height="384"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b64-Q1-Mvh">
+                                <rect key="frame" x="20" y="74" width="560" height="420"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sJX-S0-71u">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nature-1" translatesAutoresizingMaskIntoConstraints="NO" id="sJX-S0-71u">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="134"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XhL-ka-Xfz">
-                                        <rect key="frame" x="0.0" y="128" width="240" height="128"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nature-2" translatesAutoresizingMaskIntoConstraints="NO" id="XhL-ka-Xfz">
+                                        <rect key="frame" x="0.0" y="144" width="560" height="133"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wxt-Sf-oKo">
-                                        <rect key="frame" x="0.0" y="256" width="240" height="128"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nature-3" translatesAutoresizingMaskIntoConstraints="NO" id="Wxt-Sf-oKo">
+                                        <rect key="frame" x="0.0" y="287" width="560" height="134"/>
                                     </imageView>
+                                </subviews>
+                                <variation key="heightClass=compact" axis="horizontal"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Dxt-ib-zy9">
+                                <rect key="frame" x="28" y="502" width="552" height="59"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="h87-3u-TTl">
+                                        <rect key="frame" x="0.0" y="0.0" width="185" height="38"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUE-Ii-xGN">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OwM-gl-SUt">
+                                                <rect key="frame" x="110" y="8" width="75" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRp-W9-D3x">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                        <state key="normal" title="Like"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRS-R7-iG1">
+                                                        <rect key="frame" x="35" y="0.0" width="40" height="30"/>
+                                                        <state key="normal" title="Share"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A collection of nature photos from magdeleine.co" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlw-va-0AL">
+                                        <rect key="frame" x="0.0" y="38" width="377" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dxt-ib-zy9" secondAttribute="trailing" id="3JN-oi-e0J"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b64-Q1-Mvh" secondAttribute="trailing" id="BMt-pc-IuB"/>
+                            <constraint firstItem="b64-Q1-Mvh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="gYd-yQ-dA1"/>
+                            <constraint firstItem="Dxt-ib-zy9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="oF4-3V-LsR"/>
+                            <constraint firstItem="Dxt-ib-zy9" firstAttribute="top" secondItem="b64-Q1-Mvh" secondAttribute="bottom" constant="8" id="t1H-YU-4AH"/>
+                            <constraint firstItem="b64-Q1-Mvh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="tJJ-OC-AKn"/>
+                            <constraint firstItem="b64-Q1-Mvh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tjF-9L-yY9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Photo Collection" id="aa1-wm-Gvr"/>
                 </viewController>
@@ -58,4 +105,9 @@
             <point key="canvasLocation" x="215" y="-368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="nature-1" width="1000" height="667"/>
+        <image name="nature-2" width="1024" height="678"/>
+        <image name="nature-3" width="1024" height="683"/>
+    </resources>
 </document>
